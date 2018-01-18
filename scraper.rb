@@ -31,6 +31,7 @@ end
 parsed_page.css('a').each do |a|
     link = a["href"]
     next unless link
+
     unless link[0] == "#"
         full_link = link[0] == "/" ? "https://www.wearethorn.org#{link}" : link
 
