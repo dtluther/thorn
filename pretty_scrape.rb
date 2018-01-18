@@ -38,5 +38,7 @@ end
 
 joined = { links: links, projects: projects}.to_json
 
-puts joined
+File.open("pretty_output.json", "w") do |f|
+    f.write("#{joined}")
+end
 
