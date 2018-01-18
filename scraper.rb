@@ -7,7 +7,6 @@ require 'Nokogiri'
 require 'HTTParty'
 require 'Pry'
 require 'json'
-require 'byebug'
 
 page = HTTParty.get('https://www.wearethorn.org/resources-and-research')
 
