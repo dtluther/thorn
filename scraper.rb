@@ -28,10 +28,11 @@ parsed_page.css('.standard_section')[4..-3].each do |project_section|
 end
 
 # Get the links that don't have '#' at the beginning of the `href` tag
-parsed_page.css('a').each do |link|
-    next unless link["href"]
-    unless link["href"][0] == "#"
-        full_link = link["href"][0] == "/" ? "https://www.wearethorn.org#{link['href']}" : link["href"]
+parsed_page.css('a').each do |a|
+    link = a["href"]
+    next unless link
+    unless link[0] == "#"
+        full_link = link[0] == "/" ? "https://www.wearethorn.org#{link}" : link
 
         links << full_link
     end
