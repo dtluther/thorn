@@ -36,7 +36,8 @@ parsed_page.css('a').each do |link|
     end
 end
 
-joined = { links: links, projects: projects}.to_json
+JOINED = { links: links, projects: projects}.to_json
 
-puts joined
-
+if __FILE__ == $0
+    puts JOINED
+end
